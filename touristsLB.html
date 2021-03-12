@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Laura Berg">
+    <title>Turistit, Bootstrap-projekti - LB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/berg.css">
+</head>
+<body>
+    <main class="container-fluid">
+        <header class="row">
+            <div class="col-12">
+                <h1 class="ml-4 mt-4">Bootstrap-projekti</h1>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-light bg-light">
+              <div class="container-fluid">
+          <!--  <a class="navbar-brand" href="#">Navbar</a>  brändin paikka, voi jättää pois -->
+
+<!-- Hampurilaisvalikko
+ver 4: data-toggle, data-target
+aria: ruudunlukijoita varten
+-->
+                <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#valikko" 
+                aria-controls="valikko" aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <!-- kolme viivaa -->
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="valikko">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="index.html">Kaupunkini</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="touristsLB.html">Turistit</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="imagesLB.html">Kuvat</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="parallaxLB.html">Parallaksi</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="quizLB.html">Tietovisa</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="bmiLB.html">Painoindeksi</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+        </header>
+        <section class="row">
+            <div class="col-12">
+              <h2 class="mt-4">Turisteille</h2>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mt-4">
+                <h3>Viikin kaupat <span class="badge rounded-pill"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span></h3>
+                <ul class="fa-ul">
+                  <li><i class="fa fa-shopping-cart" aria-hidden="true"></i>Prisma</li>
+                  <li><i class="fa fa-shopping-cart" aria-hidden="true"></i>K-supermarket</li>
+                  <li><i class="fa fa-shopping-cart" aria-hidden="true"></i>Alepa</li>
+                  <li><i class="fa fa-shopping-cart" aria-hidden="true"></i>K-market</li>
+                  <li><i class="fa fa-shopping-cart" aria-hidden="true"></i>Musti ja Mirri</li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mt-4">
+              <h3>Harrasteita Viikissä</h3>
+              <p>
+                <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Klikkaa tästä
+                </a>
+                <div class="collapse" id="collapseExample">
+                  <div class="card card-body">
+                    <ul class="fa-ul">
+                      <li><a href="https://www.ratsastuskeskusviikki.fi/"><i class="fa fa-toggle-on" aria-hidden="true"></i>
+                      Ratsastuskeskus Viikki</a></li>
+                      <li><a href="https://www.ptsalit.fi/latokartano"><i class="fa fa-toggle-on" aria-hidden="true"></i>P&T Latokartano</a></li>
+                      <li><a href="https://viikki.fi/"><i class="fa fa-toggle-on" aria-hidden="true"></i>Viikin asukastalot</a></li>
+                      <li><a href="https://www.viikinmonitoimitalo.fi/kuntosali-2/">
+                        <i class="fa fa-toggle-on" aria-hidden="true"></i>Viikin monitoimitalo</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </p>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mt-4 mb-4">
+              <h3>Viikin kirkko</h3>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Tietoja Viikin kirkosta I
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p>Helsingin uusimman kirkkorakennuksen ulkoseinät ovat lohkottua haapapaanua. 
+                        Sisätilassa aukeaa liimapuisista kimppupilareista rakennettu pilarimetsä. 
+                        Alttaritaulu Elämän puu sekä kastesyvennyksen ja eteishallin seinän teokset ovat 
+                        lyöntihopealla kuvioitua mahonkia. Niiden aiheena on Jeesuksen viinipuuvertaus.</p>
+                        <address>Source: <a href="https://www.myhelsinki.fi/fi/n%C3%A4e-ja-koe/naapurustot/arabianranta-vanhankaupunginkoski-ja-viikki/vanhankaupunginkoski-ja-viikki">
+                          MyHelsinki</a></address>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Tietoja Viikin kirkosta II
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p>Ekologista puuarkkitehtuuria edustava kirkko on valmistunut vuonna 2005. Kirkon on 
+                        suunnitellut arkkitehti Samuli Miettinen arkkitehtitoimisto JKMM:stä. Alttaritaulu, 
+                        krusifiksi sekä kastesyvennyksen ja eteishallin teokset ovat kuvataiteilija Antti Tantun. 
+                        Kirkkotekstiilit on suunnitellut tekstiilitaiteilija Hanna Korvela.</p>
+                        <address>Source: <a href="https://www.myhelsinki.fi/fi/n%C3%A4e-ja-koe/naapurustot/arabianranta-vanhankaupunginkoski-ja-viikki/vanhankaupunginkoski-ja-viikki">
+                          MyHelsinki</a></address>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Kuva Viikin kirkosta
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <figure>
+                        <img class="img-fluid" src="img/meritahtiViikki.JPG" alt="Meritähti-trio">
+                        <caption>Meritähti-trio Viikin kirkossa</caption>
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+                
+                
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 mt-4">
+              <h3>Viikin kartano</h3>
+              <p>
+                <a class="btn btn-outline-secondary" data-bs-toggle="collapse" href="#viikinkartano" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Klikkaa tästä
+                </a>
+                <div class="collapse" id="viikinkartano">
+                  <div class="card card-body">
+                    <p>Kustavilainen Viikin kartano on kaunis kokous- ja juhlapaikka Viikin 
+                      yliopistoalueen kupeessa Helsingissä. Viihtyisät, entisöidyt tilat huokuvat 
+                      idyllistä kartanoromantiikkaa ja rauhallisessa puutarhassa ajatukset lentävät. 
+                      Kartanosalin ikkunoista aukeaa maisema ruusutarhoille, viljellyille pelloille 
+                      ja lehmälaitumille sekä niiden takana sijaitsevalle Vanhankaupungin 
+                      luonnonsuojelualueelle. Pihan puolella on vanhoja tammia ja lehmuksia.</p>
+                      <address>Source: <a href="https://www.myhelsinki.fi/fi/n%C3%A4e-ja-koe/naapurustot/arabianranta-vanhankaupunginkoski-ja-viikki/vanhankaupunginkoski-ja-viikki">
+                      MyHelsinki</a></address>
+                  </div>
+                </div>
+              </p>
+              
+            </div>
+        </section>
+        <footer class="row">
+          <div class="col-12 col-md-6">
+              <p class="text-center text-md-start mt-2">Laura Berg</p>
+              <p class="text-center text-md-start ml-2">2021</p>
+          </div>
+          <div class="col-12 col-md-6">
+              <p class="text-center text-md-end mt-2">Bootstrap & jQuery</p>
+          </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" 
+        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" 
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" 
+        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" 
+        crossorigin="anonymous"></script>
+</body>
+</html>
