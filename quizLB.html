@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Laura Berg">
     <title>Quiz, Bootstrap-projekti - LB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/berg.css">
 </head>
@@ -68,105 +71,107 @@ aria: ruudunlukijoita varten
               <div class="mb-4 border-top border-4">
                 <p class="mt-4">Milloin on ruska-aika?</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys1" id="kevät1" value="0">
-                    <label class="form-check-label" for="kevät1">Kevät</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys1" id="kevät1" value="0">
+                    <label class="form-check-label" for="kevät1">Kevät</label><i class="fa fa-times not_visible ms-4" name="kevät1" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys1" id="kesä1" value="0">
-                    <label class="form-check-label" for="kesä1">Kesä</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys1" id="kesä1" value="0">
+                    <label class="form-check-label" for="kesä1">Kesä</label><i class="fa fa-times not_visible ms-4" name="kesä1" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys1" id="syksy1" value="1">
-                    <label class="form-check-label" for="syksy1">Syksy</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys1" id="syksy1" value="1">
+                    <label class="form-check-label" for="syksy1">Syksy</label><i class="fa fa-check not_visible ms-4" name="syksy1" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="kysymys1" id="talvi1" value="0">
-                  <label class="form-check-label" for="talvi1">Talvi</label>
-              </div>
-                <p class="mt-4">Ruska tarkoittaa lehtensä varistavien kasvien syksyistä väriloistoa.</p>
-              </div>
+                  <input class="form-check-input choice" type="radio" name="kysymys1" id="talvi1" value="0">
+                  <label class="form-check-label" for="talvi1">Talvi</label><i class="fa fa-times not_visible ms-4" name="talvi1" aria-hidden="true"></i>
+                </div>
+                <p class="mt-4 not_visible" id="kysymys1">Ruska tarkoittaa lehtensä varistavien kasvien syksyistä väriloistoa.</p>
               <div class="mb-4 border-top border-4">
                 <p class="mt-4">Milloin on kaamos?</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys2" id="kevät2" value="0">
-                    <label class="form-check-label" for="kevät2">Kevät</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys2" id="kevät2" value="0">
+                    <label class="form-check-label" for="kevät2">Kevät</label><i class="fa fa-times not_visible ms-4" name="kevät2" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys2" id="kesä2" value="0">
-                    <label class="form-check-label" for="kesä2">Kesä</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys2" id="kesä2" value="0">
+                    <label class="form-check-label" for="kesä2">Kesä</label><i class="fa fa-times not_visible ms-4" name="kesä2" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys2" id="syksy2" value="0">
-                    <label class="form-check-label" for="syksy2">Syksy</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys2" id="syksy2" value="0">
+                    <label class="form-check-label" for="syksy2">Syksy</label><i class="fa fa-times not_visible ms-4" name="syksy2" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="kysymys2" id="talvi2" value="1">
-                  <label class="form-check-label" for="talvi2">Talvi</label>
+                  <input class="form-check-input choice" type="radio" name="kysymys2" id="talvi2" value="1">
+                  <label class="form-check-label" for="talvi2">Talvi</label><i class="fa fa-check not_visible ms-4" name="talvi2" aria-hidden="true"></i>
               </div>
-                <p class="mt-4">Kaamos on ajanjakso, jonka aikana aurinko ei nouse horisontin yläpuolelle.
+                <p class="mt-4 not_visible" id="kysymys2">Kaamos on ajanjakso, jonka aikana aurinko ei nouse horisontin yläpuolelle.
                    Kaamos sijoittuu talviaikaan.
                 </p>
               </div>
               <div class="mb-4 border-top border-4">
                 <p class="mt-4">Mikä vuodenaika on toiselta nimeltä suvi?</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys3" id="kevät3" value="0">
-                    <label class="form-check-label" for="kevät3">Kevät</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys3" id="kevät3" value="0">
+                    <label class="form-check-label" for="kevät3">Kevät</label><i class="fa fa-times not_visible ms-4" name="kevät3" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys3" id="kesä3" value="1">
-                    <label class="form-check-label" for="kesä3">Kesä</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys3" id="kesä3" value="1">
+                    <label class="form-check-label" for="kesä3">Kesä</label><i class="fa fa-check not_visible ms-4" name="kesä3" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys3" id="syksy3" value="0">
-                    <label class="form-check-label" for="syksy3">Syksy</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys3" id="syksy3" value="0">
+                    <label class="form-check-label" for="syksy3">Syksy</label><i class="fa fa-times not_visible ms-4" name="syksy3" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="kysymys3" id="talvi3" value="0">
-                  <label class="form-check-label" for="talvi3">Talvi</label>
+                  <input class="form-check-input choice" type="radio" name="kysymys3" id="talvi3" value="0">
+                  <label class="form-check-label" for="talvi3">Talvi</label><i class="fa fa-times not_visible ms-4" name="talvi3" aria-hidden="true"></i>
               </div>
-                <p class="mt-4">Kun puhutaan suvesta, tarkoitetaan kesää.</p>
+                <p class="mt-4 not_visible" id="kysymys3">Kun puhutaan suvesta, tarkoitetaan kesää.</p>
               </div>
               <div class="mb-4 border-top border-4">
                 <p class="mt-4">Milloin luonnossa näkyy suppilovahveroita?</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys4" id="kevät4" value="0">
-                    <label class="form-check-label" for="kevät4">Kevät</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys4" id="kevät4" value="0">
+                    <label class="form-check-label" for="kevät4">Kevät</label><i class="fa fa-times not_visible ms-4" name="kevät4" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys4" id="kesä4" value="0">
-                    <label class="form-check-label" for="kesä4">Kesä</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys4" id="kesä4" value="0">
+                    <label class="form-check-label" for="kesä4">Kesä</label><i class="fa fa-times not_visible ms-4" name="kesä4" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys4" id="syksy4" value="1">
-                    <label class="form-check-label" for="syksy4">Syksy</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys4" id="syksy4" value="1">
+                    <label class="form-check-label" for="syksy4">Syksy</label><i class="fa fa-check not_visible ms-4" name="syksy4" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="kysymys4" id="talvi4" value="0">
-                  <label class="form-check-label" for="talvi4">Talvi</label>
+                  <input class="form-check-input choice" type="radio" name="kysymys4" id="talvi4" value="0">
+                  <label class="form-check-label" for="talvi4">Talvi</label><i class="fa fa-times not_visible ms-4" name="talvi4" aria-hidden="true"></i>
               </div>
-                <p class="mt-4">Suppilovahverot ovat sieniä, joita löytyy syksyllä.</p>
+                <p class="mt-4 not_visible" id="kysymys4">Suppilovahverot ovat sieniä, joita löytyy syksyllä.</p>
               </div>
               <div class="mb-4 border-top border-4">
                 <p class="mt-4">Minä vuodenaikana saapuvat muuttolinnut?</p>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys5" id="kevät5" value="1">
-                    <label class="form-check-label" for="kevät5">Kevät</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys5" id="kevät5" value="1">
+                    <label class="form-check-label" for="kevät5">Kevät</label><i class="fa fa-check not_visible ms-4" name="kevät5" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys5" id="kesä5" value="0">
-                    <label class="form-check-label" for="kesä5">Kesä</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys5" id="kesä5" value="0">
+                    <label class="form-check-label" for="kesä5">Kesä</label><i class="fa fa-times not_visible ms-4" name="kesä5" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="kysymys5" id="syksy5" value="0">
-                    <label class="form-check-label" for="syksy5">Syksy</label>
+                    <input class="form-check-input choice" type="radio" name="kysymys5" id="syksy5" value="0">
+                    <label class="form-check-label" for="syksy5">Syksy</label><i class="fa fa-times not_visible ms-4" name="syksy5" aria-hidden="true"></i>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="kysymys5" id="talvi5" value="0">
-                  <label class="form-check-label" for="talvi5">Talvi</label>
-              </div>
-                <p class="mt-4">Muuttolinnut saapuvat keväällä.</p>
-              </div>
+                  <input class="form-check-input choice" type="radio" name="kysymys5" id="talvi5" value="0">
+                  <label class="form-check-label" for="talvi5">Talvi</label><i class="fa fa-times not_visible ms-4" name="talvi5" aria-hidden="true"></i>
+                </div>
+                  <p class="mt-4 not_visible" id="kysymys5">Muuttolinnut saapuvat keväällä.</p>
+                </div>
+                <div>
+                  <p class="mt-4" id="kokTulos"></p>
+                </div>
             </div>
         </section>
         <footer class="row">
@@ -186,5 +191,9 @@ aria: ruudunlukijoita varten
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" 
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" 
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+    <script src="js/mycode.js"></script>
 </body>
 </html>

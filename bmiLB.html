@@ -65,24 +65,24 @@ aria: ruudunlukijoita varten
               <div class="mt-2">
                 <label for="sVuosi" class="form-label">Syntymävuosi </label>
                 <i class="fa fa-question-circle" aria-hidden="true"></i>
-                <input type="number" class="form-control" id="sVuosi" placeholder="Syntymävuosi">
+                <input type="number" class="form-control bmiControl" id="sVuosi" placeholder="Syntymävuosi">
               </div>
               <div class="mt-2">
                 <label for="paino" class="form-label">Paino (kg) </label>
                 <i class="fa fa-question-circle" aria-hidden="true"></i>
-                <input type="number" class="form-control" id="paino" placeholder="Paino ilman desimaaleja">
+                <input type="number" class="form-control bmiControl" id="paino" placeholder="Paino ilman desimaaleja">
               </div>
               <div class="mt-2">
                 <label for="pituus" class="form-label">Pituus (cm) </label>
                 <i class="fa fa-question-circle" aria-hidden="true"></i>
-                <input type="number" class="form-control" id="pituus" placeholder="Pituus ilman desimaaleja">
+                <input type="number" class="form-control bmiControl" id="pituus" placeholder="Pituus ilman desimaaleja">
               </div>
               <div class="form-check mb-4 mt-4">
-                <input class="form-check-input" type="checkbox" name="normalWeight" id="normalWeight">
+                <input class="form-check-input bmiControl" type="checkbox" name="normalWeight" id="normalWeight">
                 <label class="form-check-label" for="normalWeight">Näytä myös normaalipainoni vaihteluväli</label>
               </div>
               <div class="text-end">
-                <button type="button" class="btn btn-outline-success"><i class="fa fa-calculator" aria-hidden="true"></i>BMI</button>
+                <button type="button" class="btn btn-outline-success" id="bmiButton"><i class="fa fa-calculator" aria-hidden="true"></i>BMI</button>
               </div>
             </form>
             
@@ -98,16 +98,16 @@ aria: ruudunlukijoita varten
               tekijöiden vuoksi.</p>
             <div class="mt-4">
               <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse" 
-              data-bs-target="#bmiSelitys" aria-expanded="false" aria-controls="collapseExample">
+              data-bs-target="#bmiSelitys" aria-expanded="false" aria-controls="collapseExample" id="selitys">
               <i class="fa fa-comments-o" aria-hidden="true"></i>Painoindeksin selitys</button>
               <ul class="list-group collapse bmiList" id="bmiSelitys">
-                <li class="list-group-item" id="bmi1">Merkittävä alipaino (BMI &lt 17)</li>
-                <li class="list-group-item" id="bmi2">Alipaino (BMI = 17 - &lt 18.5) </li>
-                <li class="list-group-item" id="bmi3">Normaali paino (BMI = 18.5 - &lt 25)</li>
-                <li class="list-group-item" id="bmi4">Lievä lihavuus (BMI = 25 - &lt 30)</li>
-                <li class="list-group-item" id="bmi5">Merkittävä lihavuus (BMI = 30 - &lt 35)</li>
-                <li class="list-group-item" id="bmi6">Vaikea lihavuus (BMI = 35 - &lt 40)</li>
-                <li class="list-group-item" id="bmi7">Sairaalloinen lihavuus (BMI >= 40)</li>
+                <li class="list-group-item bmiSelitys" id="bmi1">Merkittävä alipaino (BMI &lt 17)</li>
+                <li class="list-group-item bmiSelitys" id="bmi2">Alipaino (BMI = 17 - &lt 18.5) </li>
+                <li class="list-group-item bmiSelitys" id="bmi3">Normaali paino (BMI = 18.5 - &lt 25)</li>
+                <li class="list-group-item bmiSelitys" id="bmi4">Lievä lihavuus (BMI = 25 - &lt 30)</li>
+                <li class="list-group-item bmiSelitys" id="bmi5">Merkittävä lihavuus (BMI = 30 - &lt 35)</li>
+                <li class="list-group-item bmiSelitys" id="bmi6">Vaikea lihavuus (BMI = 35 - &lt 40)</li>
+                <li class="list-group-item bmiSelitys" id="bmi7">Sairaalloinen lihavuus (BMI >= 40)</li>
               </ul>
             </div>
           </div>
@@ -127,7 +127,7 @@ aria: ruudunlukijoita varten
               <label class="form-check-label" for="female">Nainen</label>
             </div>
             <div class="mt-4 mb-4">
-              <button type="button" class="btn btn-outline-success">
+              <button type="button" class="btn btn-outline-success" id="vyotaroB">
                 <i class="fa fa-heart" aria-hidden="true"></i>Vyötärö</button>
             </div>
           </div>
@@ -138,10 +138,10 @@ aria: ruudunlukijoita varten
               peittävien sisäisten rasvakerrosten tason. Tämä
               voi lisätä sydänsairauksien ja aivohalvauksen
               riskiä.</p>
-            <ul class="list-group bmiList">
-              <li class="list-group-item" id="item1">Ei terveysriskiä</li>
-              <li class="list-group-item" id="item2">Lievä terveysriski</li>
-              <li class="list-group-item" id="item3">Suuri terveysriski</li>
+            <ul class="list-group vyotaroList">
+              <li class="list-group-item vyotaroSelitys" id="item1">Ei terveysriskiä</li>
+              <li class="list-group-item vyotaroSelitys" id="item2">Lievä terveysriski</li>
+              <li class="list-group-item vyotaroSelitys" id="item3">Suuri terveysriski</li>
             </ul>
           </div>
           
@@ -163,5 +163,9 @@ aria: ruudunlukijoita varten
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" 
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" 
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+    <script src="js/mycode.js"></script>
 </body>
 </html>

@@ -62,6 +62,14 @@ a:hover {
     color: #533960;
 }
 
+.fa-check {
+    color: #004d36;
+}
+
+.fa-times {
+    color: #660000;
+}
+
 .card {
     background-color: #e8dfec;
 }
@@ -104,6 +112,30 @@ a:hover {
       border: #33ffc2 solid 5px;
   }
 
+  /* muuttaa aktiivisten inputtien varjostuksen värin */
   .btn-check:focus + .btn-outline-success, .btn-outline-success:focus {
     box-shadow: 0 0 0 0.25rem #33ffc2;
+  }
+
+  /* piilottaa tietovisan vastausten selitykset */
+  .not_visible {
+      display: none;
+  }
+
+  .right {
+      background-color: #00a170;
+      border-radius: 4px;
+  }
+
+  .wrong {
+      background-color: crimson;
+      border-radius: 4px;
+  }
+
+  .bold {
+      font-weight: bold;
+  }
+
+  .chosen {
+      background-color: #33ffc2;
   }
