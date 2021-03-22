@@ -60,6 +60,9 @@ $(document).ready(function(){
 
     // lasketaan painoindeksi ja tulostetaan tulokset
      $("#bmiButton").click(function(){
+        if (validateInput() === false) {
+            return;
+        }
         let paino = Number($("#paino").val());
         let pituus = Number($("#pituus").val());
 
@@ -140,5 +143,45 @@ $(document).ready(function(){
      $("[name=sukupuoli]").click(function(){
         $("#vyotaro").focus();
      });
+
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl)
+    });
+
+    /**
+     * Check that all input data is written. Shows the error message.
+     * @returns {Boolean} true >> ok, false >> not of
+     */
+    function validateInput() {
+        let sVuosi = Number($("#sVuosi").val());
+        let paino = Number($("#paino").val());
+        let pituus = Number($("#pituus").val());
+
+        if (sVuosi === 0 || paino === 0 || pituus === 0) {
+            document.getElementById('m_title').innerHTML = "Puuttuva tieto";
+            document.getElementById('m_body').innerHTML = "Kaikki tiedot tulee olla täytetty.";
+            // tehdään BT-olio
+            let viesti = new bootstrap.Modal(document.getElementById('mymessage'),
+                {backdrop: "static"});
+            viesti.show();
+            return false;
+        } else {
+            let vuosi = new Date().getFullYear();
+            let ika = vuosi - sVuosi;
+
+            if (ika < 20 || ika > 60) {
+                document.getElementById('m_title').innerHTML = "Huomioi ikä";
+                document.getElementById('m_body').innerHTML = "BMI-tulokset on tarkoitettu 20-60 vuotiaille.";
+                // tehdään BT-olio
+                let viesti = new bootstrap.Modal(document.getElementById('mymessage'),
+                    {backdrop: "static"});
+                viesti.show();
+                return true;
+            } else {
+                return true;
+            }
+        }
+    }
 
 });

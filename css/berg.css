@@ -52,14 +52,11 @@ a {
     color: inherit;
 }
 
-a:hover {
-    padding: 4px;
-}
-
 /* Font Awesome -kuvakkeet */
 .fa {
     margin-right: 10px;
     color: #533960;
+    text-decoration: none;
 }
 
 .fa-check {
@@ -70,10 +67,17 @@ a:hover {
     color: #660000;
 }
 
+/* BMI-sivun kysymysmerkit */
+.fa-question-circle:hover {
+    color: #533960 !important;
+    background-color: inherit;
+}
+
 .card {
     background-color: #e8dfec;
 }
 
+/* tarkista!! turistit-sivu? */
 .accordion-button:focus {
     box-shadow: none;
 }
@@ -87,15 +91,18 @@ a:hover {
     background-color: #e8dfec;
 }
 
+
 .badge,
 .btn:hover {
     background-color: #d0bfd9;
 }
 
+/* Tietovisan väliviivojen väri */
 .border-top {
     border-color: #33ffc2 !important;
 }
 
+/* aktiivisten tekstikenttien ja checboxien reunukset */
 .form-control:focus,
 .form-check-input:focus {
     border-color: #33ffc2;
@@ -103,6 +110,7 @@ a:hover {
     box-shadow: 0 0 0 0.25rem #33ffc2;
   }
 
+  /* valittujen valintaruutujen taustaväri */
  .form-check-input:checked {
       background-color: #d0bfd9;
   }
@@ -112,8 +120,10 @@ a:hover {
       border: #33ffc2 solid 5px;
   }
 
-  /* muuttaa aktiivisten inputtien varjostuksen värin */
-  .btn-check:focus + .btn-outline-success, .btn-outline-success:focus {
+  /* muuttaa aktiivisten buttonien varjostuksen värin */
+  .btn-check:focus + .btn-outline-success,
+  .btn-outline-success:focus,
+  .btn-outline-secondary:focus {
     box-shadow: 0 0 0 0.25rem #33ffc2;
   }
 
@@ -122,20 +132,42 @@ a:hover {
       display: none;
   }
 
+  /* oikean vastauksen taustaväri */
   .right {
       background-color: #00a170;
       border-radius: 4px;
   }
 
+  /* väärän vastauksen taustaväri */
   .wrong {
       background-color: crimson;
       border-radius: 4px;
   }
 
+  /* oikean vastauksen lihavointi */
   .bold {
       font-weight: bold;
   }
 
+  /* bmi-sivun oikean listaelementin taustaväri */
   .chosen {
       background-color: #33ffc2;
+  }
+
+  /* popoverien tyylit */
+  [data-bs-toggle="popover"] {
+    cursor: pointer;
+  }
+
+  a[data-bs-toggle="popover"]:focus {
+    outline: none;  
+  }
+
+  .popover-header {
+      background-color: #33ffc2;
+  }
+
+  /* kuvagallerian kuvien reunukset */
+  div figure a img {
+      border: #614370 solid 2px;
   }
