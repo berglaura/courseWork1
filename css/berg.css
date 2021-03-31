@@ -33,8 +33,16 @@ footer {
     background-color: #33ffc2 !important;
 }
 
-.nav-link:hover,
+/* linkit (paitsi navigaatio) */
 a:hover {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+/* navigaation linkit */
+.nav-link:hover {
+    font-weight: normal;
     background-color: #00a170;
     color: #e6fff7 !important;
     border-radius: 10px;
@@ -80,6 +88,7 @@ a {
 /* tarkista!! turistit-sivu? */
 .accordion-button:focus {
     box-shadow: none;
+    border-color: #33ffc2 !important;
 }
 
 .accordion-button:not(.collapsed) {
@@ -170,4 +179,23 @@ a {
   /* kuvagallerian kuvien reunukset */
   div figure a img {
       border: #614370 solid 2px;
+  }
+
+  /* modal-ikkunoiden tyylit bmi-sivulla */
+  .modal-header,
+  .modal-footer {
+      background-color: #e6fff7;
+      color: red;
+      text-shadow: 1px 1px black;
+  }
+
+  .modal-body {
+      background-color: #e6fff7;
+      color: red;
+      text-shadow: 1px 1px black;
+  }
+
+  .modal-footer button:hover {
+    background-color: rgb(31, 28, 28);
+    color: red;
   }
